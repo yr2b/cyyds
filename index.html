@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本站已停用，自动跳转中...</title>
+    <style>
+        /* 样式内容主要用于居中显示文本并适配移动端和PC */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 30px; /* 增加字体大小 */
+            font-weight: bold; /* 使用粗体 */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="content">
+    <P>PapaAI</P>
+    本站已停用，请访问新站点 <a href="http://c.iyyds.cn">c.iyyds.cn</a> ，将在 <span id="counter">5</span> 秒后自动跳转至新站点。
+</div>
+
+<script>
+    // JavaScript 用于实现5秒倒计时并自动跳转
+    let counter = 5;
+    let interval = setInterval(function() {
+        counter--;
+        document.getElementById("counter").innerText = counter;
+
+        if (counter == 0) {
+            clearInterval(interval);
+            window.location.href = "http://c.iyyds.cn";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
